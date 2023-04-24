@@ -1,0 +1,334 @@
+html {
+  scroll-behavior: smooth;
+  scroll-padding-block-start: 230px;
+}
+@media (max-width: 550px) {
+  html {
+    scroll-padding-block-start: 210px;
+  }
+}
+
+.slider .sliderMenu {
+  margin-top: 85px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 120px;
+  margin-bottom: 80px;
+}
+@media (max-width: 550px) {
+  .slider .sliderMenu {
+    gap: 90px;
+    margin-top: 30px;
+    margin-bottom: 55px;
+  }
+}
+.slider .sliderMenu h2 {
+  font-weight: 600;
+  font-size: 26.4043px;
+  line-height: 32px;
+  text-align: center;
+  color: rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+}
+@media (max-width: 550px) {
+  .slider .sliderMenu h2 {
+    font-size: 19px;
+    line-height: 26px;
+  }
+}
+.slider .sliderMenu .active {
+  color: #000000;
+  position: relative;
+}
+.slider .sliderMenu .active::after {
+  content: "";
+  position: absolute;
+  height: 4px;
+  background: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  left: 0;
+  bottom: -20px;
+}
+@media (max-width: 550px) {
+  .slider .sliderMenu .active::after {
+    bottom: -14px;
+  }
+}
+.slider .ads {
+  position: relative;
+}
+.slider .adsSlider {
+  width: 90%;
+  overflow: hidden;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  gap: 25px;
+  padding-bottom: 100px;
+  padding-left: 12px;
+  padding-right: 12px;
+}
+@media (max-width: 740px) {
+  .slider .adsSlider {
+    width: 80%;
+  }
+}
+@media (max-width: 490px) {
+  .slider .adsSlider {
+    width: 94%;
+  }
+}
+.slider .adsSlider.dragging {
+  cursor: -webkit-grab;
+  cursor: grab;
+  scroll-behavior: auto;
+}
+.slider .adsSlider .slide {
+  width: 400px;
+}
+@media (max-width: 1400px) {
+  .slider .adsSlider .slide {
+    min-width: 32%;
+  }
+}
+@media (max-width: 990px) {
+  .slider .adsSlider .slide {
+    min-width: 48%;
+  }
+}
+@media (max-width: 740px) {
+  .slider .adsSlider .slide {
+    min-width: 100%;
+  }
+}
+.slider .adsSlider .slideImg {
+  width: 100%;
+  height: 243px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 20px;
+  margin-bottom: 26px;
+  overflow: hidden;
+  margin-bottom: 24px;
+}
+@media (max-width: 1226px) {
+  .slider .adsSlider .slideImg {
+    height: 230px;
+  }
+}
+@media (max-width: 1090px) {
+  .slider .adsSlider .slideImg {
+    height: 200px;
+  }
+}
+@media (max-width: 990px) {
+  .slider .adsSlider .slideImg {
+    height: 240px;
+  }
+}
+@media (max-width: 880px) {
+  .slider .adsSlider .slideImg {
+    height: 200px;
+  }
+}
+@media (max-width: 740px) {
+  .slider .adsSlider .slideImg {
+    height: 240px;
+  }
+}
+@media (max-width: 550px) {
+  .slider .adsSlider .slideImg {
+    height: 225px;
+  }
+}
+@media (max-width: 490px) {
+  .slider .adsSlider .slideImg {
+    height: 240px;
+  }
+}
+@media (max-width: 410px) {
+  .slider .adsSlider .slideImg {
+    height: 200px;
+  }
+}
+.slider .adsSlider .slideImg img {
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+}
+.slider .adsSlider .slide h3 {
+  width: 346px;
+  font-weight: 600;
+  font-size: 22.3333px;
+  line-height: 30px;
+  color: #333333;
+  margin-bottom: 15px;
+}
+@media (max-width: 1400px) {
+  .slider .adsSlider .slide h3 {
+    width: auto;
+    max-width: 346px;
+  }
+}
+@media (max-width: 990px) {
+  .slider .adsSlider .slide h3 {
+    font-size: 21px;
+    line-height: 28px;
+  }
+}
+.slider .adsSlider .slide p {
+  width: 390px;
+  font-weight: 600;
+  font-size: 15.5556px;
+  line-height: 22px;
+  color: #333333;
+  margin-bottom: 5px;
+}
+@media (max-width: 1400px) {
+  .slider .adsSlider .slide p {
+    width: auto;
+    max-width: 390px;
+  }
+}
+@media (max-width: 990px) {
+  .slider .adsSlider .slide p {
+    font-size: 14px;
+    line-height: 20px;
+  }
+}
+.slider .adsSlider .slide .moreInfo {
+  display: inline-block;
+  font-weight: 600;
+  font-size: 19.4444px;
+  line-height: 27px;
+  color: #FFFFFF;
+  padding: 14px 27px;
+  background: #396EF8;
+  border-radius: 10px;
+  -webkit-transition: 0.34s;
+  transition: 0.34s;
+}
+@media (max-width: 490px) {
+  .slider .adsSlider .slide .moreInfo {
+    font-size: 16px;
+    line-height: 24px;
+    padding: 10px 20px;
+  }
+}
+.slider .adsSlider .slide .moreInfo:hover {
+  -webkit-transform: scale(1.12);
+          transform: scale(1.12);
+  -webkit-filter: brightness(120%);
+          filter: brightness(120%);
+}
+.slider .adsActions button {
+  background: #898989;
+  border-radius: 20px;
+  padding: 24px 20px;
+  padding-bottom: 20px;
+  border: none;
+  cursor: pointer;
+}
+@media (max-width: 490px) {
+  .slider .adsActions button {
+    padding: 18px 12px;
+  }
+}
+.slider .adsActions button img {
+  width: 12px;
+}
+.slider .adsActions .back {
+  position: absolute;
+  left: 0;
+  top: 20%;
+}
+@media (max-width: 490px) {
+  .slider .adsActions .back {
+    top: 15%;
+  }
+}
+@media (max-width: 410px) {
+  .slider .adsActions .back {
+    top: 14%;
+  }
+}
+.slider .adsActions .forward {
+  position: absolute;
+  right: 0;
+  top: 20%;
+}
+@media (max-width: 490px) {
+  .slider .adsActions .forward {
+    top: 15%;
+  }
+}
+@media (max-width: 410px) {
+  .slider .adsActions .forward {
+    top: 14%;
+  }
+}
+.slider .anons {
+  max-width: 700px;
+  margin: 0 auto 30px;
+  text-align: center;
+}
+.slider .anons h3 {
+  font-weight: 600;
+  font-size: 22.3333px;
+  line-height: 30px;
+  color: #333333;
+  margin-bottom: 15px;
+}
+@media (max-width: 550px) {
+  .slider .anons h3 {
+    font-size: 20px;
+    line-height: 26px;
+  }
+}
+.slider .anons div {
+  max-width: 400px;
+  margin: 0 auto 20px;
+  border-radius: 20px;
+  -webkit-box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
+          box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+}
+.slider .anons div img {
+  width: 100%;
+}
+.slider .anons p {
+  font-weight: 600;
+  font-size: 15.5556px;
+  line-height: 22px;
+  color: #333333;
+  margin-bottom: 25px;
+}
+@media (max-width: 550px) {
+  .slider .anons p {
+    font-size: 14px;
+    line-height: 20px;
+  }
+}
+
+.show {
+  display: block;
+}
+
+.hide {
+  display: none;
+}

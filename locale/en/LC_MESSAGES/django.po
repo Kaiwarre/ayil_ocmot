@@ -1,0 +1,164 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-03-27 13:50+0600\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: app/models.py:17
+msgid "Учебное заведение"
+msgstr "Education"
+
+#: app/models.py:18
+msgid "Учебные заведения"
+msgstr "Education"
+
+#: app/models.py:32
+msgid "Страница"
+msgstr "Page"
+
+#: app/models.py:33
+msgid "Страницы"
+msgstr "Pages"
+
+#: app/models.py:37
+msgid "Полное имя"
+msgstr "Full Name"
+
+#: app/models.py:38 app/models.py:54 app/models.py:68 app/models.py:81
+msgid "Описание"
+msgstr "Description"
+
+#: app/models.py:40
+msgid "Опыт работы"
+msgstr "Exp"
+
+#: app/models.py:48
+msgid "Преподаватель"
+msgstr "Teacher"
+
+#: app/models.py:49 app/templates/base.html:80 app/templates/base.html:105
+#: app/templates/base.html:151
+msgid "Преподаватели"
+msgstr "Teachers"
+
+#: app/models.py:53
+msgid "Название Объявления"
+msgstr "Ads title"
+
+#: app/models.py:55
+msgid "Содержимое объявления"
+msgstr "Ads Content"
+
+#: app/models.py:62
+msgid "Обьявление"
+msgstr "Ads"
+
+#: app/models.py:63 app/templates/index.html:20
+msgid "Обьявления"
+msgstr "Ads"
+
+#: app/models.py:67
+msgid "Название Анонса"
+msgstr "Anons"
+
+#: app/models.py:75
+msgid "Анонс"
+msgstr "Anons"
+
+#: app/models.py:76 app/templates/index.html:21
+msgid "Анонсы"
+msgstr "Anons"
+
+#: app/models.py:80
+msgid "Название курса"
+msgstr "Course title"
+
+#: app/models.py:89
+#, fuzzy
+#| msgid "Направления"
+msgid "Направление"
+msgstr "Directions"
+
+#: app/models.py:90
+#, fuzzy
+#| msgid "Направления"
+msgid "Направлении"
+msgstr "Directions"
+
+#: app/templates/base.html:32 app/templates/base.html:91
+msgid "KUIC UNIVERSITY Образовательные вузы"
+msgstr "KUIC UNIVERSITY Educational universities"
+
+#: app/templates/base.html:79 app/templates/base.html:104
+#: app/templates/base.html:150 app/templates/courses_list.html:30
+msgid "Направления"
+msgstr "Directions"
+
+#: app/templates/base.html:115 app/templates/base.html:118
+msgid "МЫ В СОЦИАЛЬНЫХ РЕСУРСАХ"
+msgstr "WE ARE IN SOCIAL RESOURCES"
+
+#: app/templates/base.html:126
+msgid "Наши партнёры"
+msgstr "Our partners"
+
+#: app/templates/base.html:127
+msgid "Кыргызский университет языков и культур"
+msgstr "Kyrgyz University of Languages ​​and Cultures"
+
+#: app/templates/base.html:131
+msgid "Кыргызская республика, Сокулукский район, г.Шопоков, ул.Фрунзе,20"
+msgstr "Kyrgyz Republic, Sokuluk district, Shopokov, Frunze st., 20"
+
+#: app/templates/base.html:158
+msgid "© «КЫРГЫЗСКИЙ ВУЗ КУИК КИОК» 2023"
+msgstr ""
+
+#: app/templates/edu_detail.html:15
+msgid " Подробнее"
+msgstr "More"
+
+#: app/templates/index.html:12
+msgid "ДОБРО ПОЖАЛОВАТЬ!"
+msgstr "WELCOME!"
+
+#: app/templates/index.html:14 app/templates/page_detail.html:15
+msgid "Подробнее"
+msgstr "More"
+
+#: app/templates/page_detail.html:12
+msgid "ИНСТИТУТ - КИЯК"
+msgstr "INSTITUTE - KIYAK"
+
+#: app/templates/page_detail.html:21
+msgid "О институте"
+msgstr "About the Institute"
+
+#: kiuc/settings.py:152
+msgid "English"
+msgstr "English"
+
+#: kiuc/settings.py:153
+msgid "Russian"
+msgstr "Russian"
+
+#: kiuc/settings.py:154
+msgid "Kyrgyz"
+msgstr "Kyrgyz"
+
+#~ msgid "Специальности"
+#~ msgstr "Specialties"

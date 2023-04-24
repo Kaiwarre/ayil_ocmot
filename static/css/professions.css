@@ -1,0 +1,307 @@
+.proffesions {
+  margin-top: 60px;
+}
+@media (max-width: 550px) {
+  .proffesions {
+    display: none;
+  }
+}
+@media (max-width: 1060px) {
+  .proffesions .container {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+.proffesions .ads {
+  position: relative;
+}
+.proffesions .adsSlider {
+  width: 90%;
+  overflow: hidden;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  gap: 25px;
+  padding-bottom: 100px;
+  padding-left: 12px;
+  padding-right: 12px;
+}
+@media (max-width: 1160px) {
+  .proffesions .adsSlider {
+    padding-left: 0;
+  }
+}
+@media (max-width: 990px) {
+  .proffesions .adsSlider {
+    padding-left: 16px;
+  }
+}
+@media (max-width: 740px) {
+  .proffesions .adsSlider {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    overflow: auto;
+    width: 90%;
+    gap: 80px;
+  }
+}
+@media (max-width: 600px) {
+  .proffesions .adsSlider {
+    width: 100%;
+  }
+}
+.proffesions .adsSlider.dragging {
+  cursor: -webkit-grab;
+  cursor: grab;
+  scroll-behavior: auto;
+}
+.proffesions .adsSlider .slide {
+  width: 400px;
+}
+@media (max-width: 1400px) {
+  .proffesions .adsSlider .slide {
+    min-width: 32%;
+  }
+}
+@media (max-width: 990px) {
+  .proffesions .adsSlider .slide {
+    min-width: 48%;
+  }
+}
+@media (max-width: 740px) {
+  .proffesions .adsSlider .slide {
+    min-width: 100%;
+  }
+}
+.proffesions .adsSlider .slideImg {
+  width: 390px;
+  height: 243px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 20px;
+  margin-bottom: 26px;
+  overflow: hidden;
+  margin-bottom: 24px;
+}
+@media (max-width: 1400px) {
+  .proffesions .adsSlider .slideImg {
+    width: 100%;
+    height: 220px;
+  }
+}
+@media (max-width: 1226px) {
+  .proffesions .adsSlider .slideImg {
+    height: 230px;
+  }
+}
+@media (max-width: 1090px) {
+  .proffesions .adsSlider .slideImg {
+    height: 200px;
+  }
+}
+@media (max-width: 990px) {
+  .proffesions .adsSlider .slideImg {
+    height: 240px;
+  }
+}
+@media (max-width: 880px) {
+  .proffesions .adsSlider .slideImg {
+    height: 200px;
+  }
+}
+@media (max-width: 740px) {
+  .proffesions .adsSlider .slideImg {
+    height: 290px;
+  }
+}
+.proffesions .adsSlider .slideImg img {
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+}
+.proffesions .adsSlider .slide h3 {
+  width: 346px;
+  font-weight: 600;
+  font-size: 22.3333px;
+  line-height: 30px;
+  color: #333333;
+  margin-bottom: 15px;
+}
+@media (max-width: 1400px) {
+  .proffesions .adsSlider .slide h3 {
+    width: auto;
+    max-width: 346px;
+  }
+}
+@media (max-width: 990px) {
+  .proffesions .adsSlider .slide h3 {
+    font-size: 21px;
+    line-height: 28px;
+  }
+}
+.proffesions .adsSlider .slide .moreInfo {
+  display: inline-block;
+  font-weight: 600;
+  font-size: 19.4444px;
+  line-height: 27px;
+  color: #FFFFFF;
+  padding: 14px 27px;
+  background: #396EF8;
+  border-radius: 10px;
+  -webkit-transition: 0.34s;
+  transition: 0.34s;
+}
+@media (max-width: 490px) {
+  .proffesions .adsSlider .slide .moreInfo {
+    font-size: 16px;
+    line-height: 24px;
+    padding: 10px 20px;
+  }
+}
+.proffesions .adsSlider .slide .moreInfo:hover {
+  -webkit-transform: scale(1.12);
+          transform: scale(1.12);
+  -webkit-filter: brightness(120%);
+          filter: brightness(120%);
+}
+@media (max-width: 740px) {
+  .proffesions .adsActions {
+    display: none;
+  }
+}
+.proffesions .adsActions button {
+  background: #898989;
+  border-radius: 20px;
+  padding: 24px 20px;
+  padding-bottom: 20px;
+  border: none;
+  cursor: pointer;
+}
+@media (max-width: 490px) {
+  .proffesions .adsActions button {
+    padding: 18px 12px;
+  }
+}
+.proffesions .adsActions button img {
+  width: 12px;
+}
+.proffesions .adsActions .back {
+  position: absolute;
+  left: 0;
+  top: 20%;
+}
+@media (max-width: 490px) {
+  .proffesions .adsActions .back {
+    top: 22%;
+  }
+}
+@media (max-width: 410px) {
+  .proffesions .adsActions .back {
+    top: 20%;
+  }
+}
+.proffesions .adsActions .forward {
+  position: absolute;
+  right: 0;
+  top: 20%;
+}
+@media (max-width: 490px) {
+  .proffesions .adsActions .forward {
+    top: 22%;
+  }
+}
+@media (max-width: 410px) {
+  .proffesions .adsActions .forward {
+    top: 20%;
+  }
+}
+
+.mobProf {
+  display: none;
+}
+@media (max-width: 550px) {
+  .mobProf {
+    display: block;
+  }
+}
+.mobProf .container {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.mobProf h2 {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 34px;
+  color: #333333;
+  text-align: center;
+  margin: 10px 0 26px;
+}
+.mobProf .profItems {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 60px;
+  margin-bottom: 120px;
+}
+.mobProf .profItems .profItemImg {
+  border-radius: 20px;
+  overflow: hidden;
+  max-height: 240px;
+}
+@media (max-width: 400px) {
+  .mobProf .profItems .profItemImg {
+    height: 220px;
+  }
+}
+.mobProf .profItems .profItemImg img {
+  width: 100%;
+  height: 100%;
+}
+.mobProf .profItems .profItem h3 {
+  max-width: 366px;
+  font-weight: 600;
+  font-size: 23.3333px;
+  line-height: 33px;
+  color: #333333;
+  margin: 19px 0;
+}
+.mobProf .profItems .profItem p {
+  max-width: 386px;
+  font-weight: 600;
+  font-size: 15.5556px;
+  line-height: 140%;
+  color: #333333;
+  margin-bottom: 23px;
+}
+.mobProf .profItems .profItem a {
+  display: inline-block;
+  font-weight: 600;
+  font-size: 19.4444px;
+  line-height: 27px;
+  color: #FFFFFF;
+  background: #396EF8;
+  padding: 14px 27px;
+  border-radius: 10px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+.mobProf .profItems .profItem a:hover {
+  -webkit-transform: scale(1.13);
+          transform: scale(1.13);
+  -webkit-filter: brightness(120%);
+          filter: brightness(120%);
+}

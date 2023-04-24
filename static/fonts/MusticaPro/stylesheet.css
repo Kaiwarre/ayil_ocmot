@@ -1,0 +1,13 @@
+@font-face {
+    font-family: 'Mustica Pro';
+    src: url('MusticaPro-SemiBold.eot');
+    src: url('MusticaPro-SemiBold.eot?#iefix') format('embedded-opentype'),
+        url('MusticaPro-SemiBold.woff2') format('woff2'),
+        url('MusticaPro-SemiBold.woff') format('woff'),
+        url('MusticaPro-SemiBold.ttf') format('truetype'),
+        url('MusticaPro-SemiBold.svg#MusticaPro-SemiBold') format('svg');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+

@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load i18n %}
+{% block links %}
+<link rel="stylesheet" href="{% static 'css/bundle.css' %}">
+<link rel="stylesheet" href="{% static 'css/professions.css' %}">
+{% endblock %}
+{% block content %}
+        <section class="proffesions">
+            <div class="container">
+                <div class="ads">
+                    <div class="adsSlider">
+                        {% for i in courses %}
+                        <div class="slide">
+                            <div class="slideImg"><img src="{{i.image.url}}" alt=""></div>
+                            <h3>{{i.title}}</h3>
+                            <a href="{% url 'course_detail' i.pk %}" class="moreInfo">Подробнее</a>
+                        </div>
+                        {% endfor %}
+                    </div>
+                    <div class="adsActions">
+                        <button class="back"><img src="{% static 'images/index/sliderBtn1.svg' %}" alt=""></button>
+                        <button class="forward"><img src="{% static 'images/index/sliderBtn2.svg' %}" alt=""></button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="mobProf">
+            <div class="container">
+                <h2>{% trans 'Направления' %}</h2>
+                <div class="profItems">
+                    <div class="profItem">
+                        <div class="profItemImg"><img src="{% static 'images/prof/mob1.png' %}" alt="img"></div>
+                     <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
+                             Launch demo modal
+                     </button>
+                        <!-- Модальное окно -->
+                    </div>
+                </div>
+            </div>
+        </section>
+{% endblock %}

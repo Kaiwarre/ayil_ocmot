@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load i18n %}
+{% block links %}
+<link rel="stylesheet" href="{% static 'css/bundle.css' %}">
+<link rel="stylesheet" href="{% static 'css/professions.css' %}">
+{% endblock %}
+{% block content %}
+        <section class="proffesions">
+            <div class="container">
+                <div class="ads">
+                        {% for i in teachers %}
+                        <div class="slide">
+                            <div class="slideImg"><img src="{{i.image.url}}" alt=""></div>
+                            <h3>{{i.full_name}}</h3>
+                            <a href="#" class="moreInfo">Подробнее</a>
+                        </div>
+                        {% endfor %}
+                </div>
+            </div>
+        </section>
+        <section class="mobProf">
+            <div class="container">
+                <h2>Направления</h2>
+                <div class="profItems">
+                    <div class="profItem">
+                        <div class="profItemImg"><img src="{% static 'images/prof/mob1.png' %}" alt="img"></div>
+                     <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
+                             Launch demo modal
+                     </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+{% endblock %}

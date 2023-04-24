@@ -1,0 +1,68 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load i18n %}
+{% block links %}
+<link rel="stylesheet" href="{% static 'css/bundle.css' %}">
+<link rel="stylesheet" href="{% static 'css/institut.css' %}">
+{% endblock %}
+{% block content %}
+
+
+<div id="carouselExampleCaptions" class="carousel slide">
+
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+<!--      <section class="home">-->
+<!--            <div class="homeInner">-->
+<!--                <div class="bg"><img src="{{edu.image.url}}" alt="images"></div >-->
+<!--                <h1>{{edu.title}}</h1>-->
+<!--&lt;!&ndash;                <a href="#" class="rightAction"><img src="{% static 'images/allNeed/forwardArrow.svg' %}" alt="images"></a>&ndash;&gt;-->
+<!--&lt;!&ndash;                <a href="#" class="leftAction"><img src="{% static 'images/allNeed/backArrow.svg' %}" alt="images"></a>&ndash;&gt;-->
+<!--                <a href="#aboutInstitut" class="moreInfo">{% trans ' Подробнее' %}</a>-->
+<!--            </div>-->
+<!--        </section>-->
+<!--        Большая картинка на главном экране-->
+    </div>
+      {% for i in edu.edu_images.all %}
+    <div class="carousel-item">
+      <section class="home">
+            <div class="homeInner">
+                <div class="bg"><img src="{{i.image.url}}" alt="images"></div >
+
+<!--                <a href="#" class="rightAction"><img src="{% static 'images/allNeed/forwardArrow.svg' %}" alt="images"></a>-->
+<!--                <a href="#" class="leftAction"><img src="{% static 'images/allNeed/backArrow.svg' %}" alt="images"></a>-->
+                <a href="#aboutInstitut" class="moreInfo">{% trans ' Подробнее' %}</a>
+            </div>
+        </section>
+    </div>
+      {% endfor %}
+
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+<!--        <section class="home">-->
+<!--            <div class="homeInner">-->
+<!--                <div class="bg"><img src="{{edu.image.url}}" alt="images"></div >-->
+<!--                <h1>{{edu.title}}</h1>-->
+<!--                <a href="#" class="rightAction"><img src="{% static 'images/allNeed/forwardArrow.svg' %}" alt="images"></a>-->
+<!--                <a href="#" class="leftAction"><img src="{% static 'images/allNeed/backArrow.svg' %}" alt="images"></a>-->
+<!--                <a href="#aboutInstitut" class="moreInfo">{% trans ' Подробнее' %}</a>-->
+<!--            </div>-->
+<!--        </section>-->
+        <section class="institut">
+            <div class="container">
+                <div id="aboutInstitut" class="institutInner">
+                    <h2>{{edu.title}}</h2>
+                    <h5>{{edu.description}}</h5>
+                    {{edu.body|safe}}
+                </div>
+            </div>
+        </section>
+{% endblock %}

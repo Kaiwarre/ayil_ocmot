@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load i18n %}
+{% block links %}
+<link rel="stylesheet" href="{% static 'css/bundle.css' %}">
+<link rel="stylesheet" href="{% static 'css/institut.css' %}">
+{% endblock %}
+{% block content %}
+        <section class="institut">
+            <div class="container">
+                <div id="aboutInstitut" class="institutInner">
+                    <div class="slideImg"><img src="{{ads.image.url}}" alt=""></div>
+                    <h2>{{ads.title}}</h2>
+                    <h5>{{ads.description}}</h5>
+                    {{ads.content|safe}}
+                </div>
+            </div>
+        </section>
+
+{% endblock %}

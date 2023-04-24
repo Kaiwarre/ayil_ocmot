@@ -1,0 +1,86 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load i18n %}
+{% block links %}
+<link rel="stylesheet" href="{% static 'css/bundle.css' %}">
+<link rel="stylesheet" href="{% static 'css/index.css' %}">
+{% endblock %}
+{% block content %}
+<div id="carouselExampleCaptions" class="carousel slide">
+
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <section class="home">
+            <div class="homeInner">
+                <div class="bg"><img src="{% static 'images/index/body.jpg' %}" alt="images"></div >
+                <h1>{% trans 'ДОБРО ПОЖАЛОВАТЬ!' %}</h1>
+<!--                <a href="#" class="rightAction"><img src="{% static 'images/allNeed/forwardArrow.svg' %}" alt="images"></a>-->
+<!--                <a href="#" class="leftAction"><img src="{% static 'images/allNeed/backArrow.svg' %}" alt="images"></a>-->
+                <a href="#aboutInstitut" class="moreInfo">{% trans ' Подробнее' %}</a>
+            </div>
+        </section>
+    </div>
+      {% for i in images %}
+    <div class="carousel-item">
+      <section class="home">
+            <div class="homeInner">
+                <div class="bg"><img src="{{i.image.url}}" alt="images"></div >
+                <h1>{{ i.title }}</h1>
+<!--                <a href="#" class="rightAction"><img src="{% static 'images/allNeed/forwardArrow.svg' %}" alt="images"></a>-->
+<!--                <a href="#" class="leftAction"><img src="{% static 'images/allNeed/backArrow.svg' %}" alt="images"></a>-->
+                <a href="#aboutInstitut" class="moreInfo">{% trans ' Подробнее' %}</a>
+            </div>
+        </section>
+    </div>
+      {% endfor %}
+
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+<!--        <section class="home">-->
+<!--            <div class="homeInner">-->
+<!--                <div class="bg"><img src="{% static 'images/index/Home.png' %}" alt="images"></div >-->
+<!--                <h1>{% trans 'ДОБРО ПОЖАЛОВАТЬ!' %}</h1>-->
+
+<!--                <a href="#sliderSection" class="moreInfo">{% trans 'Подробнее' %}</a>-->
+<!--            </div>-->
+<!--        </section>-->
+        <section id="sliderSection" class="slider">
+            <div class="container">
+                <div class="sliderMenu">
+                    <h2 class="active">{% trans 'Обьявления' %}</h2>
+                    <h2>{% trans 'Анонсы' %}</h2>
+                </div>
+                <div class="ads">
+                    <div class="adsSlider">
+                        {% for i in ads %}
+                        <div class="slide">
+                            <div class="slideImg"><img src="{{i.image.url}}" alt=""></div>
+                            <h3>{{i.title}}</h3>
+                            <p>{{i.description}}</p>
+                            <a href="{% url 'ads_detail' i.pk %}" class="moreInfo">Подробнее</a>
+                        </div>
+                        {% endfor %}
+                    </div>
+                    <div class="adsActions">
+                        <button class="back"><img src="{% static 'images/index/sliderBtn1.svg' %}" alt=""></button>
+                        <button class="forward"><img src="{% static 'images/index/sliderBtn2.svg' %}" alt=""></button>
+                    </div>
+                </div>
+                <div class="anons hide">
+                    {% for i in anons %}
+                    <h3>{{i.title}}</h3>
+                    <div><img src="{{i.image.url}}" alt=""></div>
+                    <p>{{i.description|safe}}</p>
+                    {% endfor %}
+                </div>
+            </div>
+        </section>
+{% endblock %}

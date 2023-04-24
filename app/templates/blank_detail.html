@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load i18n %}
+{% block links %}
+<link rel="stylesheet" href="{% static 'css/bundle.css' %}">
+<link rel="stylesheet" href="{% static 'css/institut.css' %}">
+{% endblock %}
+{% block content %}
+{% if pages.image %}
+        <section class="home">
+            <div class="homeInner">
+                <div class="bg"><img src="{{ pages.image.url }}" alt="images"></div>
+                <h1>{{ pages.title }}</h1>
+
+                <a href="#aboutInstitut" class="moreInfo">{% trans 'Подробнее' %}</a>
+            </div>
+        </section>
+{% endif %}
+        <section class="institut">
+            <div class="container">
+                <div id="aboutInstitut" class="institutInner">
+                    <h2>{{ pages.title }}</h2>
+                    {% if pages.description %}
+                    <h5>{{pages.description}}</h5>
+                    {% endif %}
+                    <p>{{pages.body|safe}}</p>
+                </div>
+            </div>
+        </section>
+
+{% endblock %}
