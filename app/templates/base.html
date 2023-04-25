@@ -38,6 +38,7 @@
                     {% for i in edus %}
                         <li><a href="{% url 'edu_detail' i.pk %}">{{i.title}}</a></li>
                     {% endfor %}
+                     <li><a href="{% url 'upload_pdf' %}">PDF</a></li>
                 </ul>
                 <div class="rightSide">
                     <form action="{% url 'set_language' %}" name="myForm" method="post" class="language">{% csrf_token %}
@@ -97,6 +98,7 @@
                     {% for i in edus %}
                     <li><a href="{% url 'edu_detail' i.pk %}">{{i.title}}</a></li>
                     {% endfor %}
+                    <li><a href="{% url 'upload_pdf' %}">PDF</a></li>
                 </ul>
             <ul class="secondList">
               {% for i in page %}

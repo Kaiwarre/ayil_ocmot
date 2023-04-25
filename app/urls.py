@@ -10,5 +10,6 @@ urlpatterns = [
     path('courses/<int:pk>', courses_list, name='courses'),
     path('ads_detail/<int:pk>', ads_detail, name='ads_detail'),
     path('course_detail/<int:pk>', course_detail, name='course_detail'),
+    path('upload_pdf/', upload_pdf, name='upload_pdf'),
 ]
 
