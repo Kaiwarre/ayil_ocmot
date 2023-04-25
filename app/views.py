@@ -42,7 +42,7 @@ def blank_detail(request, pk):
 
 
 def teachers_list(request, pk):
-    teachers = Teacher.objects.filter(education=pk)
+    teachers = Employee.objects.filter(education=pk)
     edus = Education.objects.all()
     edu = Education.objects.get(id=pk)
     page = Page.objects.all()

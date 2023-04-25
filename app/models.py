@@ -15,8 +15,8 @@ class Education(models.Model):
         return self.title
 
     class Meta:
-        verbose_name = _('Учебное заведение')
-        verbose_name_plural = _("Учебные заведения")
+        verbose_name = _('Раздел')
+        verbose_name_plural = _("Разделы")
 
 
 class Page(models.Model):
@@ -34,20 +34,20 @@ class Page(models.Model):
         verbose_name_plural = _("Страницы")
 
 
-class Teacher(models.Model):
+class Employee(models.Model):
     full_name = models.CharField(max_length=255, verbose_name=_('Полное имя'))
     content = RichTextUploadingField(blank=True, null=True,verbose_name=_('Описание'))
     date = models.DateTimeField(auto_now_add=True)
     exp = models.IntegerField(verbose_name=_('Опыт работы'))
     education = models.ForeignKey(Education, on_delete=models.CASCADE)
-    image = models.ImageField(upload_to='images/teacher/')
+    image = models.ImageField(upload_to='images/employee/')
 
     def __str__(self):
         return self.full_name
 
     class Meta:
-        verbose_name = _('Преподаватель')
-        verbose_name_plural = _("Преподаватели")
+        verbose_name = _('Сотрудник')
+        verbose_name_plural = _("Сотрудники")
 
 
 class Ads(models.Model):
