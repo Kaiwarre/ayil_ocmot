@@ -1,14 +1,21 @@
 {% extends 'base.html' %}
 
 {% block content %}
-  <h2>Upload PDF</h2>
-  <form method="post" enctype="multipart/form-data">
+{% if user.is_authenticated %}
+
+  <h2>Загрузить PDF</h2>
+  <form method="post" enctype="multipart/form-data" >
     {% csrf_token %}
     {{ form.as_p }}
-    <button type="submit">Upload</button>
+  <button type="submit" class="btn btn-primary">Загрузить</button>
   </form>
-  
-  <h2>Uploaded PDFs</h2>
+
+{% endif %}
+<br>
+<br>
+<br>
+<br>
+  <h2>Загруженные файлы</h2>
   <ul>
     {% for document in documents %}
       <li>
