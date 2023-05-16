@@ -1,26 +1,27 @@
 {% extends 'base.html' %}
 
 {% block content %}
-{% if user.is_authenticated %}
-
-  <h2>Загрузить PDF</h2>
-  <form method="post" enctype="multipart/form-data" >
-    {% csrf_token %}
-    {{ form.as_p }}
-  <button type="submit" class="btn btn-primary">Загрузить</button>
-  </form>
-
-{% endif %}
-<br>
-<br>
-<br>
-<br>
-  <h2>Загруженные файлы</h2>
-  <ul>
-    {% for document in documents %}
-      <li>
-        <a href="{{ document.pdf_file.url }}" target="_blank">{{ document.title }}</a>
-      </li>
-    {% endfor %}
-  </ul>
+  <h2>Список документов</h2>
+  {% if documents %}
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Название</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for document in documents %}
+          <tr>
+            <td>{{ forloop.counter }}</td>
+            <td>
+              <a href="{{ document.pdf_file.url }}" target="_blank">{{ document.title }}</a>
+            </td>
+          </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  {% else %}
+    <p>В данный момент нет загруженных документов.</p>
+  {% endif %}
 {% endblock %}

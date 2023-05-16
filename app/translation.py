@@ -1,6 +1,6 @@
 import modeltranslation.translator
 from modeltranslation.translator import register, TranslationOptions
-from .models import Education, Page, Ads, Anons, Course, Blank
+from .models import Education, Page, Ads, Anons
 
 
 @register(Education)
@@ -18,16 +18,9 @@ class NewsTranslationOptions(TranslationOptions):
     fields = ('title', 'description', 'body')
 
 
-@register(Blank)
-class NewsTranslationOptions(TranslationOptions):
-    fields = ('title', 'description', 'body')
-
 
 @register(Anons)
 class NewsTranslationOptions(TranslationOptions):
     fields = ('title', 'description')
 
 
-@register(Course)
-class NewsTranslationOptions(TranslationOptions):
-    fields = ('title', 'content')
